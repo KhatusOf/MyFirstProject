@@ -1,12 +1,13 @@
 import React from "react";
+import styles from "./Header.module.scss";
 
 export default function Header(){
     return(
         <header>
             <div>
-                <span className="logo">Bakery </span>
+                <span className={styles.logo}>Bakery </span>
             </div>
-            <div className="presentation"></div>
+            <div className={styles.presentation}></div>
         </header>
         
     );
