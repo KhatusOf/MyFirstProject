@@ -89,6 +89,13 @@ const [items,setItems]=useState([
 }
 ]);
 
+const[orders,setOrders]=useState([]);
+
+const addToOrder(item)=>{
+  if(!orders.some((el)=>el.id===item.id)){
+    setOrders([...orders,item]);
+  }
+}
 
   return(
     <div className="wrapper">

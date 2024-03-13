@@ -3,4 +3,38 @@ main{
     width: 100%;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    h2,p,b{
+        margin: 10px 20px;
+        color: rgb(117, 117, 117);
+    }
+
+    p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    b{
+        color: rgb(255, 0, 0);
+    }
+    
+    .addToCart{
+        position: absolute;
+        right: 20px;
+        bottom: 20px;
+        background: rgb(255, 0, 0) ;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-weight: 600;
+        color: aliceblue;
+        font-size: 20px;
+        transition: transform 1000ms ease;
+    }
+    .addToCart:hover{
+        transform:scale(1.5) translateY(-5px);
+    }
 }

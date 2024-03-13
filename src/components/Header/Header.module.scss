@@ -21,6 +21,27 @@ header{
         }
     }
 
+    .shopCartButton {
+        float: right;
+        cursor: pointer;
+        font-size: 20px;
+        transition: color 500ms ease;
+
+        &:hover,
+        &.active {
+            color: rgb(255, 0, 0) !important;
+        }
+    }
+
+    .shopCart {
+        position: absolute;
+        top: 30px;
+        right: 0;
+        width: 450px;
+        min-height: 100px;
+        background: #fafafa;
+    }
+
     .presentation{
         margin:50px 0;
         background:url(./../../assets/slide1.jpg);
