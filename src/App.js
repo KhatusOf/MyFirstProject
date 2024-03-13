@@ -1,8 +1,8 @@
 import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Items from "./components/Items"
-import ".index.scss";
+import Items from "./components/Items";
+import "./index.scss";
 
 
 export default function App() {
