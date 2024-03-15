@@ -1,0 +1,35 @@
+.item{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+    img{
+        width: 70px;
+        float: left;
+        margin-right:20px;
+    }
+    
+    h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    b{
+        color: rgb(0, 255, 170);
+        font-weight:600 ;
+    }
+}
+
+.deleteIcon{
+    color: rgb(0, 0, 0);
+    float: right;
+    position: relative;
+    top: -25px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 1s;
+
+    &:hover{
+        color: rgb(255, 0, 0);
+        transform:scale(1.5);
+    }
+}

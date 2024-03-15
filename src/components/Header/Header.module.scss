@@ -1,4 +1,13 @@
 header{
+    position: relative;
+    
+    .empty{
+
+        h2{
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    }
 
     .logo{
         font-weight: 600;
@@ -40,6 +49,10 @@ header{
         width: 450px;
         min-height: 100px;
         background: #fafafa;
+        z-index: 1000;
+        pad: 20px;
+        padding-bottom: 0;
+
     }
 
     .presentation{

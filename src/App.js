@@ -91,10 +91,16 @@ const [items,setItems]=useState([
 
 const[orders,setOrders]=useState([]);
 
-const addToOrder(item)=>{
+const deleteOrder = (id) =>{
+  setOrders(orders.filter((el)=>el.id!==id));
+}
+
+const addToOrder=(item)=>{
   if(!orders.some((el)=>el.id===item.id)){
     setOrders([...orders,item]);
-  }
+  }//добавление товараБ но одного типа
+
+  //setOrders([...orders,item]); неогран количесвто товаров одного типа
 }
 
   return(
