@@ -1,5 +1,5 @@
 import React from "react";
-import {useState, useEffect} from "react";
+import {useState, useEffect, createContext, useContext,} from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Items from "./components/Items";
@@ -7,6 +7,7 @@ import "./index.scss";
 import Categories from "./components/Categories";
 import ShowFullItem from "./components/ShowFullItem";
 
+const AppContext = createContext();
 
 export default function App() {
 const [items,setItems]=useState([
@@ -128,12 +129,33 @@ const chooseCategory = (category)=>{
   }
 
   return(
-    <div className="wrapper">
-      <Header orders={orders} onDelete={deleteOrder}/>
-      <Categories chooseCategory={chooseCategory}/>
-      <Items allItems={currentItems} onAdd={addToOrder}/>
-      {showFullItem && <ShowFullItem onShowItem={onShowItem} onAdd={addToOrder} item={fullItem}/>}
-      <Footer />
-    </div>
+    <AppContext.Provider
+    value={
+      {
+        items,
+        setItems,
+        orders,
+        setOrders,
+        currentItems,
+        setCurrentItems,
+        showFullItem,
+        setShowFullItem,
+        fullItem,
+        setFullItem,
+        deleteOrder,
+        addToOrder,
+        chooseCategory,
+        onShowItem,
+      }
+  }
+    >
+      <div className="wrapper">
+        <Header orders={orders} onDelete={deleteOrder}/>
+        <Categories chooseCategory={chooseCategory}/>
+        <Items allItems={currentItems} onAdd={addToOrder}/>
+        {showFullItem && <ShowFullItem onShowItem={onShowItem} onAdd={addToOrder} item={fullItem}/>}
+        <Footer />
+      </div>
+    </AppContext.Provider>
   );
 }
