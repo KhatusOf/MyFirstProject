@@ -11,7 +11,7 @@ export const useAppContext = () =>{
     return context;
 }
 
-export const AppProvider = ({children}) =>{
+const AppProvider = ({children}) =>{
     const [items,setItems]=useState([
         {
           id:1,
@@ -94,7 +94,6 @@ export const AppProvider = ({children}) =>{
           price:'500'
         }
       ]);
-      
       const [orders,setOrders]=useState([]);
       const [currentItems,setCurrentItems]=useState([]);
       const [showFullItem,setShowFullItem]=useState(false);
@@ -148,4 +147,6 @@ export const AppProvider = ({children}) =>{
         };
     
         return<AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;
-}
+};
+
+export default AppProvider;
